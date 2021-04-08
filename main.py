@@ -11,14 +11,16 @@ def days_to_units(number_of_days):
 
 
 def validate_and_execute():
-    if my_user_input.isdigit():
+    try:
+
         user_input_number = int(my_user_input)
         if user_input_number > 0:
             calculated_value = days_to_units(my_user_input)
             print(calculated_value)
         elif user_input_number == 0:
             print("please enter valid value")
-    else:
+
+    except ValueError:
         print("enter only whole number")
 
 
@@ -26,5 +28,3 @@ my_user_input = input("enter any number of days here and i will covert it into s
 
 validate_and_execute()
 
-
-#how to validate and execute
