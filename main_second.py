@@ -1,6 +1,3 @@
-print("my name is satabdi")
-print(200)
-
 minutes = 24*60*60
 unit = 'sec'
 
