@@ -12,19 +12,19 @@ def days_to_units(number_of_days):
 
 def validate_and_execute():
     try:
-
         user_input_number = int(my_user_input)
         if user_input_number > 0:
             calculated_value = days_to_units(my_user_input)
             print(calculated_value)
         elif user_input_number == 0:
             print("please enter valid value")
+        else:
+            print("your number is negative, enter a positive number")
 
     except ValueError:
         print("enter only whole number")
 
-
-my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
-
-validate_and_execute()
+while True:
+    my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
+    validate_and_execute()
 
