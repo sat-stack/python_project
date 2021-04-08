@@ -1,16 +1,24 @@
-print("my name is satabdi")
-print(200)
+# print("my name is satabdi")
+# print(200)
 
 minutes = 24*60*60
 unit = 'sec'
 
 
 def days_to_units(number_of_days):
-    return f"{number_of_days} days are {20 * minutes} {unit}"
+    if int(number_of_days) > 0:
+        return f"{number_of_days} days are {20 * minutes} {unit}"
+    elif int(number_of_days) == 0:
+        return "please enter valid value"
+    else:
+        return "invalid value, no conversion"
 
 
-user_input = input("enter any number of days here and i will covert it into seconds!\n")
-user_input_number = int(user_input)
+my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
 
-calculated_value = days_to_units(user_input)
-print(calculated_value)
+if my_user_input.isdigit():
+    user_input_number = int(my_user_input)
+    calculated_value = days_to_units(my_user_input)
+    print(calculated_value)
+else:
+    print("enter only number")
