@@ -22,3 +22,7 @@ if my_user_input.isdigit():
     print(calculated_value)
 else:
     print("enter only number")
+
+
+
+# here I learnt if and else condition for validation of input
