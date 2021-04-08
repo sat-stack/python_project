@@ -1,13 +1,12 @@
 # print("my name is satabdi")
 # print(200)
 
-minutes = 24*60*60
+minutes = 24 * 60 * 60
 unit = 'sec'
 
 
 def days_to_units(number_of_days):
-        return f"{number_of_days} days are {20 * minutes} {unit}"
-
+    return f"{number_of_days} days are {20 * minutes} {unit}"
 
 
 def validate_and_execute():
@@ -24,7 +23,8 @@ def validate_and_execute():
     except ValueError:
         print("enter only whole number")
 
-while True:
+
+my_user_input = ""
+while my_user_input != "exit":
     my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
     validate_and_execute()
-
