@@ -6,23 +6,25 @@ unit = 'sec'
 
 
 def days_to_units(number_of_days):
-    if int(number_of_days) > 0:
         return f"{number_of_days} days are {20 * minutes} {unit}"
-    elif int(number_of_days) == 0:
-        return "please enter valid value"
+
+
+
+def validate_and_execute():
+    if my_user_input.isdigit():
+        user_input_number = int(my_user_input)
+        if user_input_number > 0:
+            calculated_value = days_to_units(my_user_input)
+            print(calculated_value)
+        elif user_input_number == 0:
+            print("please enter valid value")
     else:
-        return "invalid value, no conversion"
+        print("enter only whole number")
 
 
 my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
 
-if my_user_input.isdigit():
-    user_input_number = int(my_user_input)
-    calculated_value = days_to_units(my_user_input)
-    print(calculated_value)
-else:
-    print("enter only number")
+validate_and_execute()
 
 
-
-# here I learnt if and else condition for validation of input
+#how to validate and execute
