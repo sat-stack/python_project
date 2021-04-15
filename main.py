@@ -6,14 +6,14 @@ unit = 'sec'
 
 
 def days_to_units(number_of_days):
-    return f"{number_of_days} days are {20 * minutes} {unit}"
+    return f"{number_of_days} days are {number_of_days * minutes} {unit}"
 
 
 def validate_and_execute():
     try:
-        user_input_number = int(my_user_input)
+        user_input_number = int(many_days)
         if user_input_number > 0:
-            calculated_value = days_to_units(my_user_input)
+            calculated_value = days_to_units(user_input_number)
             print(calculated_value)
         elif user_input_number == 0:
             print("please enter valid value")
@@ -21,10 +21,13 @@ def validate_and_execute():
             print("your number is negative, enter a positive number")
 
     except ValueError:
-        print("enter only whole number")
+        print("enter numbers only, no text")
 
 
 my_user_input = ""
 while my_user_input != "exit":
     my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
-    validate_and_execute()
+    print(type(my_user_input.split(",")))
+    print(my_user_input.split(","))
+    for many_days in my_user_input.split(","):
+        validate_and_execute()
