@@ -12,6 +12,8 @@ def days_to_units(number_of_days):
 def validate_and_execute():
     try:
         user_input_number = int(many_days)
+
+        # we want to do conversion only for positive integers
         if user_input_number > 0:
             calculated_value = days_to_units(user_input_number)
             print(calculated_value)
@@ -27,7 +29,15 @@ def validate_and_execute():
 my_user_input = ""
 while my_user_input != "exit":
     my_user_input = input("enter any number of days here and i will covert it into seconds!\n")
-    print(type(my_user_input.split(",")))
-    print(my_user_input.split(","))
-    for many_days in my_user_input.split(","):
+    list_of_days = my_user_input.split(", ")
+
+    print(list_of_days)
+    print(set(list_of_days))
+
+    print(type(list_of_days))
+    print(type(set(list_of_days)))
+
+    for many_days in set(list_of_days):
         validate_and_execute()
+
+
