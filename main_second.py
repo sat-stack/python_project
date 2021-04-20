@@ -38,8 +38,3 @@ for product_row in range(2, product_list.max_row + 1):
 print(products_per_supplier)
 print(total_value_per_supplier)
 print(products_under_10_inv)
-
-    # save the file
-inv_file.save("inventory_with_total_value.xlsx")
-
-
